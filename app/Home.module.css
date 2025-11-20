@@ -4,11 +4,9 @@
 
 .hero {
   background: var(--white);
-  padding-top: 260px;
-  padding-bottom: 260px;
+  padding: 260px 0;
   background-image: url(../public/images/hero1x.webp);
-  max-width: 1440px;
-  height: 696px;
+  min-height: 696px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -29,6 +27,7 @@
   flex-direction: column;
   padding: 0 64px;
   max-width: 1440px;
+  margin: 0 auto;
 }
 
 .title {

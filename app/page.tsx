@@ -11,8 +11,8 @@ export default function Home() {
         <p className={css.description}>
           You can find everything you want in our catalog
         </p>
-        <Link href="/catalog" className={css.button}>
-          View Now
+        <Link href="/catalog" >
+          <button className={css.button} type="button">View Now</button>
         </Link>
       </div>
       </section>
