@@ -1,0 +1,15 @@
+.title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--main);
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.description {
+    font-size: 18px;
+    color: var(--main);
+    line-height: 28px;
+    margin-bottom: 16px;
+    text-align: center;
+}

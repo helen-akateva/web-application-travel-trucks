@@ -1,0 +1,38 @@
+.header {
+    background: var(--inputs);
+    padding: 24px 0;
+}
+
+.headerContainer {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 64px;
+}
+
+.pageNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: block;
+}
+
+.navigation {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+}
+
+.navigation a {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--main);
+    transition: color 0.3s;
+}
+
+.navigation a:hover {
+    color: var(--button);
+}
