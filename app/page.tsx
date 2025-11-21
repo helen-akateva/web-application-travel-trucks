@@ -1,5 +1,5 @@
 import Link from "next/link";
-import css from "./home.module.css";
+import css from "./page.module.css";
 
 export default function Home() {
   return (
