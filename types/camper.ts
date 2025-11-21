@@ -1,15 +1,12 @@
-export type CamperForm = "panelTruck" | "fullyIntegrated" | "alcove";
-export type TransmissionType = "automatic" | "manual";
-
-export interface Gallery {
-  thumb: string;
-  original: string;
-}
-
 export interface Review {
   reviewer_name: string;
   reviewer_rating: number;
   comment: string;
+}
+
+export interface GalleryImage {
+  thumb: string;
+  original: string;
 }
 
 export interface Camper {
@@ -19,13 +16,13 @@ export interface Camper {
   rating: number;
   location: string;
   description: string;
-  form: CamperForm;
+  form: string;
   length: string;
   width: string;
   height: string;
   tank: string;
   consumption: string;
-  transmission: TransmissionType;
+  transmission: string;
   engine: string;
   AC: boolean;
   bathroom: boolean;
@@ -36,31 +33,23 @@ export interface Camper {
   microwave: boolean;
   gas: boolean;
   water: boolean;
-  gallery: Gallery[];
+  gallery: GalleryImage[];
   reviews: Review[];
 }
 
-export interface CamperFilters {
+export interface FilterParams {
   location?: string;
-  form?: CamperForm;
+  form?: string;
   AC?: boolean;
-  bathroom?: boolean;
   kitchen?: boolean;
+  bathroom?: boolean;
   TV?: boolean;
   radio?: boolean;
   refrigerator?: boolean;
   microwave?: boolean;
   gas?: boolean;
   water?: boolean;
-  transmission?: TransmissionType;
+  transmission?: string;
 }
 
-export interface PaginationParams {
-  page?: number;
-  limit?: number;
-}
-
-export interface CampersResponse {
-  items: Camper[];
-  total: number;
-}
+export type EquipmentKey = 'AC' | 'kitchen' | 'bathroom' | 'TV' | 'radio' | 'refrigerator' | 'microwave' | 'gas' | 'water';

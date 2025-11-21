@@ -6,11 +6,11 @@
   background: var(--white);
   padding: 260px 0;
   background-image: url(../public/images/hero1x.webp);
-  min-height: 696px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0 auto;
+    min-height: calc(100vh - 80px);
 }
 @media (min-resolution: 192dpi) {
   .hero {

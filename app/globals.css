@@ -14,29 +14,51 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
+html,
 body {
+  max-width: 100vw;
+  overflow-x: hidden;
   font-family: var(--font-family), sans-serif;
-  color: var(--main);
-  background-color: var(--white);
+    color: var(--main);
+    background-color: var(--white);
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button {
-  font-family: var(--font-family), sans-serif;
-  cursor: pointer;
+  font-family: inherit;
   border: none;
-  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1440px;
 }
 
 ul {
   list-style: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
