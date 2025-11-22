@@ -12,6 +12,16 @@
   --button: #e44848;
   --button-hover: #d84343;
   --rating: #ffc531;
+
+  /* Aliases for components */
+  --color-primary: var(--button);
+  --color-text: var(--main);
+  --color-text-secondary: var(--text);
+  --color-white: var(--white);
+  --color-background: var(--inputs);
+  --color-border: var(--gray-light);
+  --color-rating: var(--rating);
+  --font-family: Inter, sans-serif;
 }
 
 * {
@@ -25,8 +35,8 @@ body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-family), sans-serif;
-    color: var(--main);
-    background-color: var(--white);
+  color: var(--main);
+  background-color: var(--white);
 }
 
 a {
@@ -53,6 +63,7 @@ img {
 ul {
   list-style: none;
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;

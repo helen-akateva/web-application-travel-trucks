@@ -69,7 +69,7 @@ export default function FiltersSidebar() {
                 </div>
 
                 {/* Filters */}
-                <div className={`${css.section} ${css.divider}`}>
+                <div className={css.section}>
                     <h3 className={css.sectionTitle}>Filters</h3>
 
                     {/* Vehicle Equipment */}

@@ -74,14 +74,13 @@
     align-items: start;
 }
 
-
-
 .bookingSection {
     position: sticky;
     top: 24px;
 }
 
 .icon {
+    fill: var(--color-rating);
     color: var(--color-rating);
     flex-shrink: 0;
 }
