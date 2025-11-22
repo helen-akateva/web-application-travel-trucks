@@ -60,7 +60,7 @@ export default function FiltersSidebar() {
                         </svg>
                         <Input
                             type="text"
-                            placeholder="City"
+                            placeholder="Kyiv, Ukraine"
                             value={localFilters.location || ''}
                             onChange={(e) => handleLocationChange(e.target.value)}
                             className={css.locationInput}

@@ -74,9 +74,7 @@
     align-items: start;
 }
 
-.tabContent {
-    /* Tab content will scroll if needed */
-}
+
 
 .bookingSection {
     position: sticky;
