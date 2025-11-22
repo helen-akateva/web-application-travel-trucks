@@ -5,7 +5,7 @@
 .hero {
   background: var(--white);
   padding: 260px 0;
-  background-image: url(../public/images/hero1x.webp);
+  background-image: url(/images/hero1x.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,7 +14,7 @@
 }
 @media (min-resolution: 192dpi) {
   .hero {
-    background-image: url(../public/images/hero2x.webp);
+    background-image: url(/images/hero2x.webp);
   }
 }
 
