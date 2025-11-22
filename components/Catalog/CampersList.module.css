@@ -1,0 +1,32 @@
+.container {
+    flex: 1;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.empty {
+    text-align: center;
+    padding: 48px;
+}
+
+.emptyText {
+    font-size: 18px;
+    color: var(--color-text-secondary);
+}
+
+.loadMoreWrapper {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.loadMoreButton {
+    padding: 16px 48px;
+}
+
+.loader {
+    margin-top: 24px;
+}
