@@ -1,0 +1,63 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.input {
+    padding: 18px;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    font-size: 16px;
+    font-family: var(--font-family);
+    color: var(--color-text);
+    transition: border-color 0.3s ease;
+    background-color: var(--color-white);
+}
+
+.input::placeholder {
+    color: var(--color-text-secondary);
+    opacity: 0.6;
+}
+
+.input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.input.error {
+    border-color: var(--color-primary);
+}
+
+.errorText {
+    font-size: 14px;
+    color: var(--color-primary);
+    margin-top: 4px;
+}
+
+/* Custom calendar styling */
+.input[type="date"] {
+    position: relative;
+    cursor: pointer;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.input[type="date"]::-webkit-calendar-picker-indicator:hover {
+    opacity: 1;
+}
+
+/* Calendar icon color */
+.input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(27%) sepia(8%) saturate(1015%) hue-rotate(182deg) brightness(95%) contrast(88%);
+}
