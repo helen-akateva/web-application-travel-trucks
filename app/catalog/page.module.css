@@ -1,0 +1,22 @@
+.page {
+    min-height: 100vh;
+    padding: 48px 64px;
+}
+
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.layout {
+    display: flex;
+    gap: 32px;
+}
+
+.sidebar {
+    flex-shrink: 0;
+}
+
+.content {
+    flex: 1;
+}
