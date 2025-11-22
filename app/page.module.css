@@ -10,7 +10,7 @@
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 72px);
 }
 @media (min-resolution: 192dpi) {
   .hero {

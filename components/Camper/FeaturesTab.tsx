@@ -5,16 +5,35 @@ interface FeaturesTabProps {
     camper: Camper;
 }
 
+// Icon mapping for features
+const FEATURE_ICON_MAP: Record<string, string> = {
+    transmission: 'automatic',
+    automatic: 'automatic',
+    manual: 'automatic',
+    engine: 'petrol',
+    petrol: 'petrol',
+    diesel: 'petrol',
+    AC: 'ac',
+    bathroom: 'shower',
+    kitchen: 'kitchen',
+    TV: 'tv',
+    radio: 'radio',
+    refrigerator: 'refrigerator',
+    microwave: 'microwave',
+    gas: 'gas',
+    water: 'water',
+};
+
 export default function FeaturesTab({ camper }: FeaturesTabProps) {
     // Characteristics to display
     const characteristics = [
-        { key: 'transmission', value: camper.transmission },
-        { key: 'engine', value: camper.engine },
-        { key: 'AC', value: camper.AC ? 'AC' : null },
-        { key: 'bathroom', value: camper.bathroom ? 'Bathroom' : null },
-        { key: 'kitchen', value: camper.kitchen ? 'Kitchen' : null },
-        { key: 'TV', value: camper.TV ? 'TV' : null },
-        { key: 'radio', value: camper.radio ? 'Radio' : null },
+        { key: 'transmission', value: camper.transmission, icon: 'automatic' },
+        { key: 'engine', value: camper.engine, icon: 'petrol' },
+        { key: 'AC', value: camper.AC ? 'AC' : null, icon: 'ac' },
+        { key: 'bathroom', value: camper.bathroom ? 'Bathroom' : null, icon: 'shower' },
+        { key: 'kitchen', value: camper.kitchen ? 'Kitchen' : null, icon: 'kitchen' },
+        { key: 'TV', value: camper.TV ? 'TV' : null, icon: 'tv' },
+        { key: 'radio', value: camper.radio ? 'Radio' : null, icon: 'radio' },
     ].filter((item) => item.value);
 
     // Details to display
@@ -34,7 +53,7 @@ export default function FeaturesTab({ camper }: FeaturesTabProps) {
                 {characteristics.map((item) => (
                     <div key={item.key} className={css.feature}>
                         <svg width={20} height={20} className={css.featureIcon}>
-                            <use href={`/icons/sprite.svg#icon-${item.key.toLowerCase()}`} />
+                            <use href={`/sprite.svg#icon-${item.icon}`} />
                         </svg>
                         <span>
                             {typeof item.value === 'string' ? item.value : item.value ? item.key : ''}
