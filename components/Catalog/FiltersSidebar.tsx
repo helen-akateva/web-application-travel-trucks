@@ -10,6 +10,18 @@ import { useCampersStore } from '@/lib/store/campersStore';
 import Input from '../Ui/Input';
 import Button from '../Ui/Button';
 
+// Icon mapping for sprite.svg
+const ICON_MAP: Record<string, string> = {
+    AC: 'ac',
+    transmission: 'automatic',
+    kitchen: 'kitchen',
+    TV: 'tv',
+    bathroom: 'shower',
+    panelTruck: 'van',
+    fullyIntegrated: 'grid',
+    alcove: 'alcove',
+};
+
 export default function FiltersSidebar() {
     const { setFilters } = useCampersStore();
     const [localFilters, setLocalFilters] = useState<FilterParams>({});
@@ -42,12 +54,18 @@ export default function FiltersSidebar() {
                 {/* Location Filter */}
                 <div className={css.section}>
                     <label className={css.label}>Location</label>
-                    <Input
-                        type="text"
-                        placeholder="City"
-                        value={localFilters.location || ''}
-                        onChange={(e) => handleLocationChange(e.target.value)}
-                    />
+                    <div className={css.inputWrapper}>
+                        <svg className={css.locationIcon} width={20} height={20}>
+                            <use href="/sprite.svg#icon-map" />
+                        </svg>
+                        <Input
+                            type="text"
+                            placeholder="City"
+                            value={localFilters.location || ''}
+                            onChange={(e) => handleLocationChange(e.target.value)}
+                            className={css.locationInput}
+                        />
+                    </div>
                 </div>
 
                 {/* Filters */}
@@ -77,7 +95,7 @@ export default function FiltersSidebar() {
                                             className={`${css.filterButton} ${isActive ? css.active : ''}`}
                                         >
                                             <svg width={32} height={32} className={css.filterIcon}>
-                                                <use href={`/icons/sprite.svg#icon-${option.key.toLowerCase()}`} />
+                                                <use href={`/sprite.svg#icon-${ICON_MAP[option.key]}`} />
                                             </svg>
                                             <span className={css.filterLabel}>{option.label}</span>
                                         </button>
@@ -102,7 +120,7 @@ export default function FiltersSidebar() {
                                             className={`${css.filterButton} ${isActive ? css.active : ''}`}
                                         >
                                             <svg width={32} height={32} className={css.filterIcon}>
-                                                <use href={`/icons/sprite.svg#icon-${type.value.toLowerCase()}`} />
+                                                <use href={`/sprite.svg#icon-${ICON_MAP[type.value]}`} />
                                             </svg>
                                             <span className={css.filterLabel}>{type.label}</span>
                                         </button>

@@ -12,6 +12,19 @@ interface CamperCardProps {
   camper: Camper;
 }
 
+// Icon mapping for features
+const FEATURE_ICON_MAP: Record<string, string> = {
+  automatic: 'automatic',
+  manual: 'automatic',
+  petrol: 'petrol',
+  diesel: 'petrol',
+  AC: 'ac',
+  Kitchen: 'kitchen',
+  Bathroom: 'shower',
+  TV: 'tv',
+  Radio: 'radio',
+};
+
 export default function CamperCard({ camper }: CamperCardProps) {
   const { toggleFavorite, isFavorite, hasHydrated } = useFavoritesStore();
 
@@ -19,11 +32,11 @@ export default function CamperCard({ camper }: CamperCardProps) {
 
   // Get key features to display
   const features = [];
-  if (camper.transmission) features.push({ label: camper.transmission });
-  if (camper.engine) features.push({ label: camper.engine });
-  if (camper.AC) features.push({ label: "AC" });
-  if (camper.kitchen) features.push({ label: "Kitchen" });
-  if (camper.bathroom) features.push({ label: "Bathroom" });
+  if (camper.transmission) features.push({ label: camper.transmission, icon: FEATURE_ICON_MAP[camper.transmission] || 'automatic' });
+  if (camper.engine) features.push({ label: camper.engine, icon: FEATURE_ICON_MAP[camper.engine] || 'petrol' });
+  if (camper.AC) features.push({ label: "AC", icon: 'ac' });
+  if (camper.kitchen) features.push({ label: "Kitchen", icon: 'kitchen' });
+  if (camper.bathroom) features.push({ label: "Bathroom", icon: 'shower' });
 
   // Get image URL from gallery
   const imageUrl =
@@ -61,12 +74,8 @@ export default function CamperCard({ camper }: CamperCardProps) {
                     favorite ? "Remove from favorites" : "Add to favorites"
                   }
                 >
-                  <svg width={26} height={24} className={css.icon}>
-                    <use
-                      href={`/icons/sprite.svg#icon-${
-                        favorite ? "heart-filled" : "heart"
-                      }`}
-                    />
+                  <svg width={26} height={24} className={`${css.icon} ${favorite ? css.favoriteActive : ''}`}>
+                    <use href="/sprite.svg#icon-property" />
                   </svg>
                 </button>
               )}
@@ -76,8 +85,8 @@ export default function CamperCard({ camper }: CamperCardProps) {
           {/* Meta */}
           <div className={css.meta}>
             <div className={css.rating}>
-              <svg width={16} height={16} className={css.icon}>
-                <use href="/icons/sprite.svg#icon-star" />
+              <svg width={16} height={16} className={css.starIcon}>
+                <use href="/sprite.svg#icon-star" />
               </svg>
               <span className={css.ratingText}>
                 {camper.rating} ({camper.reviews?.length || 0} Reviews)
@@ -85,7 +94,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
             </div>
             <div className={css.location}>
               <svg width={16} height={16} className={css.icon}>
-                <use href="/icons/sprite.svg#icon-location" />
+                <use href="/sprite.svg#icon-map" />
               </svg>
               <span>{camper.location}</span>
             </div>
@@ -99,7 +108,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
             {features.slice(0, 5).map((feature, index) => (
               <span key={index} className={css.feature}>
                 <svg width={20} height={20} className={css.featureIcon}>
-                  <use href="/icons/sprite.svg#icon-feature" />
+                  <use href={`/sprite.svg#icon-${feature.icon}`} />
                 </svg>
                 {feature.label}
               </span>
