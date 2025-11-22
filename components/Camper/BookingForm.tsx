@@ -1,52 +1,76 @@
 'use client';
 
-import { useFormState, useFormStatus } from 'react-dom';
-import { useMemo, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import toast from 'react-hot-toast';
-import { submitBooking, type BookingFormState } from '@/lib/actions/bookingActions';
-
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import styles from './BookingForm.module.css';
 import Button from '../Ui/Button';
 import Input from '../Ui/Input';
 
-function SubmitButton() {
-    const { pending } = useFormStatus();
-
-    return (
-        <Button type="submit" variant="primary" isLoading={pending} className={styles.submitButton}>
-            Send
-        </Button>
-    );
-}
-
-const initialState: BookingFormState = {
-    success: false,
-};
-
 export default function BookingForm() {
-    const [state, formAction] = useFormState(submitBooking, initialState);
-    const formRef = useRef<HTMLFormElement>(null);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [selectedDate, setSelectedDate] = useState<Date | null>(null);
 
-    // Calculate min and max dates
-    const { minDate, maxDate } = useMemo(() => {
+    const handleSubmit = async (formData: FormData) => {
+        const name = formData.get('name') as string;
+        const email = formData.get('email') as string;
+
+        // Валідація
+        if (!name?.trim()) {
+            toast.error('Name is required');
+            return;
+        }
+
+        if (!email?.trim()) {
+            toast.error('Email is required');
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            toast.error('Invalid email format');
+            return;
+        }
+
+        if (!selectedDate) {
+            toast.error('Booking date is required');
+            return;
+        }
+
+        // Перевірка дати
         const today = new Date();
-        const min = today.toISOString().split('T')[0]; // Today in YYYY-MM-DD format
+        today.setHours(0, 0, 0, 0);
 
-        // 6 months from today
+        if (selectedDate < today) {
+            toast.error('Cannot book for past dates');
+            return;
+        }
+
         const sixMonthsLater = new Date(today);
         sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
-        const max = sixMonthsLater.toISOString().split('T')[0];
 
-        return { minDate: min, maxDate: max };
-    }, []);
-
-    // Handle success state
-    useEffect(() => {
-        if (state.success && state.message) {
-            toast.success(state.message);
-            formRef.current?.reset();
+        if (selectedDate > sixMonthsLater) {
+            toast.error('Cannot book more than 6 months in advance');
+            return;
         }
-    }, [state.success, state.message]);
+
+        // Симуляція відправки
+        setIsSubmitting(true);
+        await new Promise((resolve) => setTimeout(resolve, 1000));
+        setIsSubmitting(false);
+
+        toast.success('Booking request sent successfully! We will contact you soon.');
+
+        // Скидання форми
+        const form = document.querySelector('form') as HTMLFormElement;
+        form?.reset();
+        setSelectedDate(null);
+    };
+
+    // Мінімальна та максимальна дата
+    const today = new Date();
+    const sixMonthsLater = new Date();
+    sixMonthsLater.setMonth(sixMonthsLater.getMonth() + 6);
 
     return (
         <div className={styles.form}>
@@ -55,28 +79,18 @@ export default function BookingForm() {
                 Stay connected! We are always ready to help you.
             </p>
 
-            <form ref={formRef} action={formAction} className={styles.fields}>
-                <Input
-                    type="text"
-                    name="name"
-                    placeholder="Name*"
-                    error={state.errors?.name}
-                />
+            <form action={handleSubmit} className={styles.fields} noValidate>
+                <Input type="text" name="name" placeholder="Name*" />
+                <Input type="email" name="email" placeholder="Email*" />
 
-                <Input
-                    type="email"
-                    name="email"
-                    placeholder="Email*"
-                    error={state.errors?.email}
-                />
-
-                <Input
-                    type="date"
-                    name="bookingDate"
-                    placeholder="Booking date*"
-                    min={minDate}
-                    max={maxDate}
-                    error={state.errors?.bookingDate}
+                <DatePicker
+                    selected={selectedDate}
+                    onChange={(date) => setSelectedDate(date)}
+                    minDate={today}
+                    maxDate={sixMonthsLater}
+                    placeholderText="Booking date*"
+                    dateFormat="dd.MM.yyyy"
+                    className={styles.datePicker}
                 />
 
                 <textarea
@@ -84,8 +98,9 @@ export default function BookingForm() {
                     placeholder="Comment"
                     className={styles.textarea}
                 />
-
-                <SubmitButton />
+                <Button type="submit" variant="primary" isLoading={isSubmitting}>
+                    Send
+                </Button>
             </form>
         </div>
     );

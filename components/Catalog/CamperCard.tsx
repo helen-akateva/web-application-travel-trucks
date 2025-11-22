@@ -54,7 +54,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
               src={imageUrl}
               alt={camper.name}
               fill
-              className={css.image}
+              style={{ objectFit: 'cover', objectPosition: 'center top' }}
             />
           </div>
         </div>
@@ -105,7 +105,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
 
           {/* Features */}
           <div className={css.features}>
-            {features.slice(0, 5).map((feature, index) => (
+            {features.slice(0, 4).map((feature, index) => (
               <span key={index} className={css.feature}>
                 <svg width={20} height={20} className={css.featureIcon}>
                   <use href={`/sprite.svg#icon-${feature.icon}`} />

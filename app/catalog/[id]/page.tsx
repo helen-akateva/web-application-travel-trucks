@@ -35,6 +35,9 @@ export default function CamperDetailsPage() {
         };
 
         fetchCamper();
+
+        // Scroll to top when page loads
+        window.scrollTo(0, 0);
     }, [params.id]);
 
     if (isLoading) {

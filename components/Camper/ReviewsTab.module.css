@@ -46,17 +46,24 @@
 }
 
 .star {
-    color: var(--color-rating);
-    font-size: 16px;
+    fill: var(--rating);
+    color: var(--rating);
 }
 
 .starEmpty {
-    color: var(--color-border);
-    font-size: 16px;
+    fill: var(--badges);
+    color: var(--badges);
 }
 
 .comment {
     font-size: 16px;
     color: var(--color-text-secondary);
     line-height: 1.5;
+}
+
+.emptyText {
+    font-size: 16px;
+    color: var(--color-text-secondary);
+    text-align: center;
+    padding: 24px;
 }
