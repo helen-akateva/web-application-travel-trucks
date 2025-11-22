@@ -64,7 +64,7 @@ export default function CamperDetailsPage() {
                     <div className={css.meta}>
                         <div className={css.rating}>
                             <svg width={16} height={16} className={css.icon}>
-                                <use href="/icons/sprite.svg#icon-star" />
+                                <use href="/sprite.svg#icon-star" />
                             </svg>
                             <span className={css.ratingText}>
                                 {camper.rating} ({camper.reviews?.length || 0} Reviews)
@@ -72,7 +72,7 @@ export default function CamperDetailsPage() {
                         </div>
                         <div className={css.location}>
                             <svg width={16} height={16} className={css.icon}>
-                                <use href="/icons/sprite.svg#icon-location" />
+                                <use href="/sprite.svg#icon-location" />
                             </svg>
                             <span>{camper.location}</span>
                         </div>
