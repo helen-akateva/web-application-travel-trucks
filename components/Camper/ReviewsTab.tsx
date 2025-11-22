@@ -35,7 +35,7 @@ export default function ReviewsTab({ reviews }: ReviewsTabProps) {
                                         height={16}
                                         className={i < review.reviewer_rating ? css.star : css.starEmpty}
                                     >
-                                        <use href="/icons/sprite.svg#icon-star" />
+                                        <use href="/sprite.svg#icon-star" />
                                     </svg>
                                 ))}
                             </div>

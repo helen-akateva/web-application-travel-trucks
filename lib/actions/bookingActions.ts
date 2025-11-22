@@ -61,8 +61,7 @@ export async function submitBooking(
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
-    // Here you would typically save to database or send to API
-    console.log('Booking submitted:', { name, email, bookingDate, comment });
+    
 
     return {
         success: true,
