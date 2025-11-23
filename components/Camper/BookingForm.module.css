@@ -147,12 +147,20 @@
 :global(.react-datepicker__day-names) {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 0;
+  margin-bottom: 12px;
   position: relative;
-  padding-bottom: 0;
+  padding-bottom: 12px;
 }
 
-
+:global(.react-datepicker__day-names::after) {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 14px;
+  right: 14px;
+  height: 1px;
+  background-color: rgba(71, 84, 103, 0.2);
+}
 
 :global(.react-datepicker__day-name) {
   font-family: var(--font-family);
