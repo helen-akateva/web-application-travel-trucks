@@ -3,7 +3,6 @@
 import { useState } from "react";
 import toast from "react-hot-toast";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import Button from "../Ui/Button";
 import Input from "../Ui/Input";
 import styles from "./BookingForm.module.css";
