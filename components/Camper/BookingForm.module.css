@@ -126,11 +126,11 @@
 
 :global(.react-datepicker__header) {
   background-color: var(--white);
-  border-bottom: 1px solid var(--text);
+  border-bottom: none;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding-top: 14px;
-  padding-bottom: 14px;
+  padding-bottom: 0;
   position: relative;
 }
 
