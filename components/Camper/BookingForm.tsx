@@ -94,6 +94,7 @@ export default function BookingForm() {
           className={styles.datePicker}
           calendarStartDay={1}
           formatWeekDay={(day) => day.toUpperCase().substring(0, 3)}
+          popperClassName={styles.datePickerPopper}
         />
 
         <textarea
