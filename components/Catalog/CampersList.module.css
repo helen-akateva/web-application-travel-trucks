@@ -19,12 +19,26 @@
 }
 
 .loadMoreWrapper {
-    margin-top: 48px;
+    margin-top: 40px;
     text-align: center;
 }
 
 .loadMoreButton {
-    padding: 16px 48px;
+    border-radius: 200px;
+    padding: 16px 28px;
+    width: 145px;
+    height: 56px;
+    font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 16px;
+        color: var(--main);
+}
+
+.loadMoreButton:hover {
+    border: 1px solid var(--button-hover);
+}
+.loadMoreButton:active {
+    border: 1px solid var(--button-hover);
 }
 
 .loader {
