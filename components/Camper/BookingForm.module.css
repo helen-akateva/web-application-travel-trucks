@@ -95,6 +95,7 @@
   height: 284px;
   box-shadow: none;
   position: relative;
+  overflow: hidden;
 }
 
 :global(.react-datepicker::before) {
@@ -155,8 +156,8 @@
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  right: 0;
+  left: 14px;
+  right: 14px;
   height: 1px;
   background-color: rgba(71, 84, 103, 0.2);
 }
