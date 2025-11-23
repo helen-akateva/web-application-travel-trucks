@@ -126,11 +126,11 @@
 
 :global(.react-datepicker__header) {
   background-color: var(--white);
-  border-bottom: none;
+  border-bottom: 1px solid var(--text);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding-top: 14px;
-  padding-bottom: 0;
+  padding-bottom: 14px;
   position: relative;
 }
 
@@ -147,20 +147,12 @@
 :global(.react-datepicker__day-names) {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 12px;
+  margin-bottom: 0;
   position: relative;
-  padding-bottom: 12px;
+  padding-bottom: 0;
 }
 
-:global(.react-datepicker__day-names::after) {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 14px;
-  right: 14px;
-  height: 1px;
-  background-color: rgba(71, 84, 103, 0.2);
-}
+
 
 :global(.react-datepicker__day-name) {
   font-family: var(--font-family);
