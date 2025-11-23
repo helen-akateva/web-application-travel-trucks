@@ -1,36 +1,124 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚐 TravelTrucks
 
-## Getting Started
+**TravelTrucks** is a modern web application for searching and booking campers for travel. Built with Next.js and TypeScript, it provides a fast, convenient, and intuitive platform for travelers.
 
-First, run the development server:
+## 📋 Project Description
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+TravelTrucks helps users find the perfect camper for their journey. The application provides detailed information about each camper, including photos, specifications, reviews, and booking capabilities.
+
+## ✨ Key Features
+
+- **Camper Catalog** — browse available campers with detailed information
+- **Advanced Filtering** — search campers by location, body type, and equipment
+- **Detailed Information** — view specifications, photo gallery, and reviews
+- **Favorites** — save favorite campers for quick access
+- **Booking System** — reservation form for selected dates
+- **Responsive Design** — proper display on all devices
+
+## 🛠️ Technologies
+
+The project is built using a modern technology stack:
+
+- **[Next.js 16](https://nextjs.org/)** — React framework with App Router
+- **[TypeScript](https://www.typescriptlang.org/)** — type safety and better developer experience
+- **[React 19](https://react.dev/)** — library for building user interfaces
+- **[Zustand](https://zustand-demo.pmnd.rs/)** — state management
+- **[TanStack Query](https://tanstack.com/query)** — server state management and caching
+- **[Axios](https://axios-http.com/)** — HTTP client for API requests
+- **[React DatePicker](https://reactdatepicker.com/)** — date selection for bookings
+- **[React Hot Toast](https://react-hot-toast.com/)** — user notifications
+- **[CSS Modules](https://github.com/css-modules/css-modules)** — modular component styling
+
+## 📦 Installation
+
+### Prerequisites
+
+Make sure you have installed:
+
+- **Node.js** version 18.x or higher
+- **npm** or **yarn**
+
+### Installation Steps
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/helen-akateva/web-application-travel-trucks.git
+   cd web-application-travel-trucks
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+
+   ```bash
+   npm run dev
+   ```
+
+4. **Open the application:**
+
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🚀 Usage
+
+### Available Commands
+
+- `npm run dev` — start development server
+- `npm run build` — build project for production
+- `npm start` — run production build
+- `npm run lint` — check code with linter
+
+### Project Structure
+
+```
+web-application-travel-trucks/
+├── app/                    # Next.js App Router pages
+│   ├── catalog/           # Catalog page
+│   ├── page.tsx           # Home page
+│   └── layout.tsx         # Root layout
+├── components/            # React components
+│   ├── Camper/           # Camper detail page components
+│   ├── Catalog/          # Catalog components
+│   ├── Header/           # Header components
+│   └── Ui/               # Reusable UI components
+├── lib/                   # Utilities and helpers
+│   ├── api/              # API client
+│   └── store/            # Zustand store
+├── types/                 # TypeScript type definitions
+└── public/               # Static assets
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Main Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **`/`** — Home page with welcome section
+- **`/catalog`** — Camper catalog with filters
+- **`/catalog/:id`** — Detailed camper information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🌐 Deployment
 
-## Learn More
+The project is optimized for deployment on [Vercel](https://vercel.com/):
 
-To learn more about Next.js, take a look at the following resources:
+1. Connect your GitHub repository to Vercel
+2. Configure environment variables
+3. Vercel will automatically build and deploy your project
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Alternatively, you can use any hosting platform that supports Node.js.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 👩‍💻 Author
 
-## Deploy on Vercel
+**Olena Akatieva**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- LinkedIn: [linkedin.com/in/olena-akatieva](https://www.linkedin.com/in/olenaakatieva/)
+- GitHub: [@helen-akateva](https://github.com/helen-akateva)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 License
+
+This project was created for educational purposes.
+
+---
+
+**Happy travels with TravelTrucks! 🚐✨**
