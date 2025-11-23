@@ -4,7 +4,7 @@
   font-weight: 500;
   border-radius: 200px;
   width: 166px;
-    height: 56px;
+  height: 56px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
@@ -18,37 +18,32 @@
 
 .primary {
   background-color: var(--button);
-  /* замість var(--color-primary) */
+
   color: var(--white);
-  /* замість var(--color-white) */
 }
 
 .primary:hover:not(:disabled) {
   background-color: var(--button-hover);
-  /* замість var(--color-primary-hover) */
 }
 
 .secondary {
   background-color: transparent;
   color: var(--text);
-  /* замість var(--color-text) */
-  border: 1px solid var(--gray-light);
-  /* замість var(--color-border) */
+
+border: 1px solid var(--gray-light);
 }
 
 .secondary:hover:not(:disabled) {
   border-color: var(--button);
-  /* замість var(--color-primary) */
 }
 
 .outline {
   background-color: transparent;
   color: var(--gray);
-  /* замість var(--color-text-secondary) */
+
   border: 1px solid var(--gray-light);
-  /* замість var(--color-border) */
 }
 
 .outline:hover:not(:disabled) {
-  border-color: var(--text);
+border: 1px solid var(--gray-light);
 }

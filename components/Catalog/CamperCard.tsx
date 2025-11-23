@@ -96,7 +96,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
               <svg width={16} height={16} className={css.icon}>
                 <use href="/sprite.svg#icon-map" />
               </svg>
-              <span>{camper.location}</span>
+              <span className={css.camperLocation}>{camper.location}</span>
             </div>
           </div>
 
