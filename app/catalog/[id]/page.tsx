@@ -100,6 +100,7 @@ export default function CamperDetailsPage() {
 
                 {/* Tab Content and Booking Form */}
                 <div className={css.content}>
+                 
                     {/* Tab Content */}
                     <div className={css.tabContent}>
                         {activeTab === 'features' ? (

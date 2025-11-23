@@ -91,6 +91,7 @@ export default function BookingForm() {
                     placeholderText="Booking date*"
                     dateFormat="dd.MM.yyyy"
                     className={styles.datePicker}
+                    calendarStartDay={1}
                 />
 
                 <textarea
@@ -98,10 +99,12 @@ export default function BookingForm() {
                     placeholder="Comment"
                     className={styles.textarea}
                 />
-                <Button type="submit" variant="primary" isLoading={isSubmitting}>
-                    Send
-                </Button>
-               
+                <div className={styles.buttonWrapper}>
+                    <Button type="submit" variant="primary" isLoading={isSubmitting}>
+                        Send
+                    </Button>
+                </div>
+
             </form>
         </div>
     );

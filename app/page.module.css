@@ -10,8 +10,8 @@
   background-size: cover;
   background-position: center;
   margin: 0 auto;
-    min-height: calc(100vh - 72px);
 }
+
 @media (min-resolution: 192dpi) {
   .hero {
     background-image: url(/images/hero2x.webp);
@@ -21,13 +21,18 @@
 .container {
   position: relative;
   z-index: 2;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
+  width: 100%;
+}
+
+.contentWrapper {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
   flex-direction: column;
-  padding: 0 64px;
-  max-width: 1440px;
-  margin: 0 auto;
+ 
 }
 
 .title {
@@ -63,6 +68,7 @@
   letter-spacing: -0.01em;
   color: var(--white);
 }
+
 .button:hover {
   background-color: var(--button-hover);
 }
