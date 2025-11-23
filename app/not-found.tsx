@@ -9,14 +9,6 @@ export const metadata: Metadata = {
     description: "This page could not be found on TravelTrucks ",
     url: `https://web-application-travel-trucks.vercel.app/404`,
     siteName: "TravelTrucks",
-    images: [
-      {
-        url: "https://.png",
-        width: 1200,
-        height: 630,
-        alt: "TravelTrucks not-found image",
-      },
-    ],
     type: "article",
   },
 };

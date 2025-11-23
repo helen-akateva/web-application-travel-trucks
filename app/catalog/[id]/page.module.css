@@ -1,95 +1,95 @@
 .page {
-    padding: 48px 0 80px;
-    background: var(--white);
+  padding: 48px 0 80px;
+  background: var(--white);
 }
 
 .container {
-    max-width: 1440px;
-    margin: 0 auto;
-    padding: 0 64px;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 64px;
 }
 
 .header {
-    margin-bottom: 28px;
+  margin-bottom: 28px;
 }
 
 .title {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.3;
-    color: var(--main);
-    margin-bottom: 8px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--main);
+  margin-bottom: 8px;
 }
 
 .meta {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
 }
 
 .rating {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text);
 }
 
 .ratingText {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    text-decoration: underline;
-    text-decoration-skip-ink: none;
-    color: var(--main);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  color: var(--main);
 }
 
 .location {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--main);
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--main);
 }
 
 .price {
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 1.3;
-    color: var(--main);
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.3;
+  color: var(--main);
 }
 
 .gallery {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .description {
-    font-family: var(--font-family);
-    font-weight: 400;
-    font-size: 16px;
-    color: var(--text);
-    margin-bottom: 60px;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 60px;
 }
 
 .tabs {
-    margin-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .content {
-    display: grid;
-    grid-template-columns: 631px 641px;
-    gap: 40px;
-    align-items: start;
+  display: grid;
+  grid-template-columns: 631px 641px;
+  gap: 40px;
+  align-items: start;
 }
 
 .bookingSection {
-    position: sticky;
-    top: 24px;
+  position: sticky;
+  top: 24px;
 }
 
 .icon {
-    fill: var(--color-rating);
-    color: var(--color-rating);
-    flex-shrink: 0;
+  fill: var(--color-rating);
+  color: var(--color-rating);
+  flex-shrink: 0;
 }

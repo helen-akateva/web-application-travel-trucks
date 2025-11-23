@@ -1,69 +1,69 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
 .review {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 
 .header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .avatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: var(--color-background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--color-primary);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary);
 }
 
 .reviewerInfo {
-    flex: 1;
+  flex: 1;
 }
 
 .reviewerName {
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
 }
 
 .rating {
-    display: flex;
-    gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
 .star {
-    fill: var(--rating);
-    color: var(--rating);
+  fill: var(--rating);
+  color: var(--rating);
 }
 
 .starEmpty {
-    fill: var(--badges);
-    color: var(--badges);
+  fill: var(--badges);
+  color: var(--badges);
 }
 
 .comment {
-    font-size: 16px;
-    color: var(--color-text-secondary);
-    line-height: 1.5;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
 }
 
 .emptyText {
-    font-size: 16px;
-    color: var(--color-text-secondary);
-    text-align: center;
-    padding: 24px;
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  padding: 24px;
 }

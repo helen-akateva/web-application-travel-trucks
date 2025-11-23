@@ -8,7 +8,6 @@
 .content {
   display: flex;
   flex-direction: column;
- 
 }
 
 .section {
@@ -28,7 +27,6 @@
   position: relative;
   width: 100%;
   margin-bottom: 40px;
-  
 }
 .locationIcon {
   position: absolute;
@@ -44,10 +42,7 @@
   padding-left: 48px !important;
   width: 360px;
   height: 56px;
-   
 }
-
-
 
 .divider {
   border-top: 1px solid var(--gray-light);
@@ -55,7 +50,7 @@
 }
 
 .sectionTitle {
-font-family: var(--font-family);
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
   color: var(--text);
@@ -63,7 +58,7 @@ font-family: var(--font-family);
 }
 
 .subsectionTitle {
-font-family: var(--font-family);
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 20px;
   line-height: 1.2;
@@ -105,9 +100,8 @@ font-family: var(--font-family);
 }
 
 .filterButton.active {
-border: 1px solid var(--button);
-background: var(--white);
-  
+  border: 1px solid var(--button);
+  background: var(--white);
 }
 
 .filterIcon {
@@ -123,7 +117,6 @@ background: var(--white);
 }
 
 .searchButton {
-    padding: 16px 60px;
-    margin-top: 8px;
-   
+  padding: 16px 60px;
+  margin-top: 8px;
 }

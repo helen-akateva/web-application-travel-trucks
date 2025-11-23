@@ -9,6 +9,36 @@ const api = axios.create({
   },
 });
 
+export async function getCampers(
+  filters: FilterParams = {},
+  page: number = 1
+): Promise<{ items: Camper[]; total: number }> {
+  try {
+    const params = buildFilterParams(filters, page);
+
+    const response = await api.get<{ total: number; items: Camper[] }>(
+      "/campers",
+      { params }
+    );
+
+    const { items = [], total = 0 } = response.data || {};
+
+    return { items: Array.isArray(items) ? items : [], total };
+  } catch {
+    return { items: [], total: 0 };
+  }
+}
+
+
+export async function getCamperById(id: string): Promise<Camper> {
+  try {
+    const response = await api.get<Camper>(`/campers/${id}`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+}
+
 function buildFilterParams(filters: FilterParams, page: number = 1) {
   const params: Record<string, string | number | boolean> = {
     page,
@@ -46,33 +76,4 @@ function buildFilterParams(filters: FilterParams, page: number = 1) {
   }
 
   return params;
-}
-
-export async function getCampers(
-  filters: FilterParams = {},
-  page: number = 1
-): Promise<{ items: Camper[]; total: number }> {
-  try {
-    const params = buildFilterParams(filters, page);
-
-    const response = await api.get<{ total: number; items: Camper[] }>(
-      "/campers",
-      { params }
-    );
-
-    const { items = [], total = 0 } = response.data || {};
-
-    return { items: Array.isArray(items) ? items : [], total };
-  } catch {
-    return { items: [], total: 0 };
-  }
-}
-
-export async function getCamperById(id: string): Promise<Camper> {
-  try {
-    const response = await api.get<Camper>(`/campers/${id}`);
-    return response.data;
-  } catch (error) {
-    throw error;
-  }
 }

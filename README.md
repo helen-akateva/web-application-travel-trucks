@@ -100,7 +100,7 @@ web-application-travel-trucks/
 
 ## 🌐 Deployment
 
-The project is optimized for deployment on [Vercel](https://vercel.com/):
+The project is optimized for deployment on [Vercel](https://web-application-travel-trucks.vercel.app/):
 
 1. Connect your GitHub repository to Vercel
 2. Configure environment variables

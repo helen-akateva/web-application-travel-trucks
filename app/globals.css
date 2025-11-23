@@ -1,6 +1,5 @@
 @import "modern-normalize/modern-normalize.css";
 
-
 :root {
   --main: #101828;
   --text: #475467;
@@ -13,7 +12,6 @@
   --button-hover: #d84343;
   --rating: #ffc531;
 
-  /* Aliases for components */
   --color-primary: var(--button);
   --color-text: var(--main);
   --color-text-secondary: var(--text);

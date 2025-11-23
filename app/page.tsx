@@ -3,7 +3,6 @@ import css from "./page.module.css";
 
 export default function Home() {
   return (
-
     <section className={css.hero}>
       <div className={css.container}>
         <div className={css.contentWrapper}>
@@ -17,6 +16,5 @@ export default function Home() {
         </div>
       </div>
     </section>
-
   );
 }

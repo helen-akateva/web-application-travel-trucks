@@ -1,39 +1,39 @@
 .tabs {
-    display: flex;
-    gap: 40px;
-    border-bottom: 1px solid var(--color-border);
-    margin-bottom: 32px;
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 32px;
 }
 
 .tab {
-    padding-bottom: 24px;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 1.2;
-    color: var(--main);
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    transition: color 0.3s ease;
+  padding-bottom: 24px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .tab:hover {
-    stroke-width: 5px;
-    stroke: var(--button);
+  stroke-width: 5px;
+  stroke: var(--button);
 }
 
 .tab.active {
-    color: var(--color-text);
+  color: var(--color-text);
 }
 
 .tab.active::after {
-    content: '';
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background-color: var(--color-primary);
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-primary);
 }

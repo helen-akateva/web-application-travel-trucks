@@ -4,9 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { formatPrice } from "@/lib/utils";
 import type { Camper } from "@/types/camper";
-import css from "./CamperCard.module.css";
 import { useFavoritesStore } from "@/lib/store/favoritesStore";
 import Button from "../Ui/Button";
+import css from "./CamperCard.module.css";
 
 interface CamperCardProps {
   camper: Camper;
@@ -14,15 +14,15 @@ interface CamperCardProps {
 
 // Icon mapping for features
 const FEATURE_ICON_MAP: Record<string, string> = {
-  automatic: 'automatic',
-  manual: 'automatic',
-  petrol: 'petrol',
-  diesel: 'petrol',
-  AC: 'ac',
-  Kitchen: 'kitchen',
-  Bathroom: 'shower',
-  TV: 'tv',
-  Radio: 'radio',
+  automatic: "automatic",
+  manual: "automatic",
+  petrol: "petrol",
+  diesel: "petrol",
+  AC: "ac",
+  Kitchen: "kitchen",
+  Bathroom: "shower",
+  TV: "tv",
+  Radio: "radio",
 };
 
 export default function CamperCard({ camper }: CamperCardProps) {
@@ -32,11 +32,19 @@ export default function CamperCard({ camper }: CamperCardProps) {
 
   // Get key features to display
   const features = [];
-  if (camper.transmission) features.push({ label: camper.transmission, icon: FEATURE_ICON_MAP[camper.transmission] || 'automatic' });
-  if (camper.engine) features.push({ label: camper.engine, icon: FEATURE_ICON_MAP[camper.engine] || 'petrol' });
-  if (camper.AC) features.push({ label: "AC", icon: 'ac' });
-  if (camper.kitchen) features.push({ label: "Kitchen", icon: 'kitchen' });
-  if (camper.bathroom) features.push({ label: "Bathroom", icon: 'shower' });
+  if (camper.transmission)
+    features.push({
+      label: camper.transmission,
+      icon: FEATURE_ICON_MAP[camper.transmission] || "automatic",
+    });
+  if (camper.engine)
+    features.push({
+      label: camper.engine,
+      icon: FEATURE_ICON_MAP[camper.engine] || "petrol",
+    });
+  if (camper.AC) features.push({ label: "AC", icon: "ac" });
+  if (camper.kitchen) features.push({ label: "Kitchen", icon: "kitchen" });
+  if (camper.bathroom) features.push({ label: "Bathroom", icon: "shower" });
 
   // Get image URL from gallery
   const imageUrl =
@@ -54,7 +62,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
               src={imageUrl}
               alt={camper.name}
               fill
-              style={{ objectFit: 'cover', objectPosition: 'center top' }}
+              style={{ objectFit: "cover", objectPosition: "center top" }}
             />
           </div>
         </div>
@@ -74,7 +82,13 @@ export default function CamperCard({ camper }: CamperCardProps) {
                     favorite ? "Remove from favorites" : "Add to favorites"
                   }
                 >
-                  <svg width={26} height={24} className={`${css.icon} ${favorite ? css.favoriteActive : ''}`}>
+                  <svg
+                    width={26}
+                    height={24}
+                    className={`${css.icon} ${
+                      favorite ? css.favoriteActive : ""
+                    }`}
+                  >
                     <use href="/sprite.svg#icon-property" />
                   </svg>
                 </button>

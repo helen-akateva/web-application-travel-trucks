@@ -1,46 +1,46 @@
 .container {
-    flex: 1;
+  flex: 1;
 }
 
 .list {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
 .empty {
-    text-align: center;
-    padding: 48px;
+  text-align: center;
+  padding: 48px;
 }
 
 .emptyText {
-    font-size: 18px;
-    color: var(--color-text-secondary);
+  font-size: 18px;
+  color: var(--color-text-secondary);
 }
 
 .loadMoreWrapper {
-    margin-top: 40px;
-    text-align: center;
+  margin-top: 40px;
+  text-align: center;
 }
 
 .loadMoreButton {
-    border-radius: 200px;
-    padding: 16px 28px;
-    width: 145px;
-    height: 56px;
-    font-family: var(--font-family);
-        font-weight: 500;
-        font-size: 16px;
-        color: var(--main);
+  border-radius: 200px;
+  padding: 16px 28px;
+  width: 145px;
+  height: 56px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--main);
 }
 
 .loadMoreButton:hover {
-    border: 1px solid var(--button-hover);
+  border: 1px solid var(--button-hover);
 }
 .loadMoreButton:active {
-    border: 1px solid var(--button-hover);
+  border: 1px solid var(--button-hover);
 }
 
 .loader {
-    margin-top: 24px;
+  margin-top: 24px;
 }

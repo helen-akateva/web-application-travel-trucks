@@ -2,14 +2,13 @@
 
 import { useCampersStore } from "@/lib/store/campersStore";
 import CamperCard from "./CamperCard";
-import css from "./CampersList.module.css";
 import Loading from "@/app/loading";
 import Button from "../Ui/Button";
+import css from "./CampersList.module.css";
 
 export default function CampersList() {
   const { campers, isLoading, hasMore, loadMore } = useCampersStore();
 
-  // Ensure campers is always an array
   const campersList = Array.isArray(campers) ? campers : [];
 
   if (isLoading && campersList.length === 0) {

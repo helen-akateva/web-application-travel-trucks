@@ -1,18 +1,18 @@
 .gallery {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 48px;
-    margin-bottom: 28px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  margin-bottom: 28px;
 }
 
 .imageWrapper {
-    position: relative;
-    width: 292px;
-    height: 312px;
-    border-radius: 10px;
-    overflow: hidden;
+  position: relative;
+  width: 292px;
+  height: 312px;
+  border-radius: 10px;
+  overflow: hidden;
 }
 
 .image {
-    object-fit: cover;
+  object-fit: cover;
 }

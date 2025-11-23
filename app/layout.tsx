@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import TanStackProvider from "@/components/TanStackProvider/TanStackProvider";
 import Header from "@/components/Header/Header";
 import { Toaster } from "react-hot-toast";
+import "./globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -26,21 +26,21 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.variable}>
         <TanStackProvider>
-          <Header/>
+          <Header />
           <main>{children}</main>
-             <Toaster
+          <Toaster
             position="top-right"
             toastOptions={{
               duration: 4000,
               style: {
-                background: '#fff',
-                color: '#101828',
-                border: '1px solid #DADDE1',
+                background: "#fff",
+                color: "#101828",
+                border: "1px solid #DADDE1",
               },
               success: {
                 iconTheme: {
-                  primary: '#E44848',
-                  secondary: '#fff',
+                  primary: "#E44848",
+                  secondary: "#fff",
                 },
               },
             }}
