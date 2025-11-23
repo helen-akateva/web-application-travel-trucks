@@ -1,32 +1,38 @@
 .form {
-    background-color: var(--color-white);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    padding: 32px;
+border: 1px solid var(--gray-light);
+    border-radius: 10px;
+    padding: 44px;
+    width: 641px;
+    height: 588px;
 }
 
 .title {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--color-text);
+    font-family: var(--font-family);
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 1.2;
+        color: var(--main);
     margin-bottom: 8px;
 }
 
 .subtitle {
+font-family: var(--font-family);
+    font-weight: 400;
     font-size: 16px;
-    color: var(--color-text-secondary);
+    color: var(--gray);
     margin-bottom: 24px;
 }
 
 .fields {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
 }
 
 .textarea {
-    padding: 18px;
-    border: 1px solid var(--color-border);
+padding: 18px 308px 76px 18px;
+    border: none;
+    background: var(--inputs);
     border-radius: 12px;
     font-size: 16px;
     font-family: var(--font-family);
@@ -50,11 +56,14 @@
     width: 100%;
 }
 
+
+
 /* DatePicker Input Styles */
 .datePicker {
     width: 100%;
-    padding: 18px;
-    border: 1px solid var(--color-border);
+    padding: 18px 282px 18px 18px;
+    border: none;
+    background: var(--inputs);
     border-radius: 12px;
     font-size: 16px;
     font-family: var(--font-family);
@@ -76,10 +85,11 @@
 /* Custom DatePicker Calendar Styles */
 :global(.react-datepicker) {
     font-family: var(--font-family);
-    border: 1px solid var(--color-border);
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
+fill: var(--white);
+    border: 1px solid var(--text);
+border-radius: 12px;
+    width: 276px;
+    height: 274px;}
 
 :global(.react-datepicker__header) {
     background-color: var(--color-white);
@@ -90,10 +100,8 @@
 }
 
 :global(.react-datepicker__current-month) {
-    font-size: 16px;
-    font-weight: 600;
-    color: var(--color-text);
-    margin-bottom: 8px;
+width: 252px;
+    height: 32px;
 }
 
 :global(.react-datepicker__day-name) {

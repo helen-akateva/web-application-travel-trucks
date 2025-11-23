@@ -101,6 +101,7 @@ export default function BookingForm() {
                 <Button type="submit" variant="primary" isLoading={isSubmitting}>
                     Send
                 </Button>
+               
             </form>
         </div>
     );
