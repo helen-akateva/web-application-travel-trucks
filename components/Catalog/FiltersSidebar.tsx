@@ -51,7 +51,7 @@ export default function FiltersSidebar() {
     return (
         <aside className={css.sidebar}>
             <div className={css.content}>
-                {/* Location Filter */}
+                {/* Location */}
                 <div className={css.section}>
                     <label className={css.label}>Location</label>
                     <div className={css.inputWrapper}>
@@ -60,7 +60,7 @@ export default function FiltersSidebar() {
                         </svg>
                         <Input
                             type="text"
-                            placeholder="Kyiv, Ukraine"
+                            placeholder="City"
                             value={localFilters.location || ''}
                             onChange={(e) => handleLocationChange(e.target.value)}
                             className={css.locationInput}

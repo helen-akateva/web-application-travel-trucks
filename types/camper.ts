@@ -52,4 +52,13 @@ export interface FilterParams {
   transmission?: string;
 }
 
-export type EquipmentKey = 'AC' | 'kitchen' | 'bathroom' | 'TV' | 'radio' | 'refrigerator' | 'microwave' | 'gas' | 'water';
+export type EquipmentKey =
+  | "AC"
+  | "kitchen"
+  | "bathroom"
+  | "TV"
+  | "radio"
+  | "refrigerator"
+  | "microwave"
+  | "gas"
+  | "water";

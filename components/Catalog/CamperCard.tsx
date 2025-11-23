@@ -26,9 +26,9 @@ const FEATURE_ICON_MAP: Record<string, string> = {
 };
 
 export default function CamperCard({ camper }: CamperCardProps) {
-  const { toggleFavorite, isFavorite, hasHydrated } = useFavoritesStore();
+  const { toggleFavorite, favorites, hasHydrated } = useFavoritesStore();
 
-  const favorite = isFavorite(camper.id);
+  const favorite = favorites.includes(camper.id);
 
   // Get key features to display
   const features = [];

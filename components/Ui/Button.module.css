@@ -3,6 +3,8 @@
   font-size: 16px;
   font-weight: 500;
   border-radius: 200px;
+  width: 166px;
+    height: 56px;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;

@@ -8,7 +8,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+ 
 }
 
 .section {
@@ -27,8 +27,9 @@
 .inputWrapper {
   position: relative;
   width: 100%;
+  margin-bottom: 40px;
+  
 }
-
 .locationIcon {
   position: absolute;
   left: 18px;
@@ -41,7 +42,12 @@
 
 .locationInput {
   padding-left: 48px !important;
+  width: 360px;
+  height: 56px;
+   
 }
+
+
 
 .divider {
   border-top: 1px solid var(--gray-light);
@@ -49,28 +55,33 @@
 }
 
 .sectionTitle {
-  font-size: 14px;
-  color: var(--text);
+font-family: var(--font-family);
   font-weight: 500;
-  margin-bottom: 16px;
+  font-size: 16px;
+  color: var(--text);
+  margin-bottom: 32px;
 }
 
 .subsectionTitle {
-  font-size: 20px;
-  color: var(--main);
+font-family: var(--font-family);
   font-weight: 600;
-  margin-bottom: 16px;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+  margin-bottom: 24px;
 }
 
 .subsectionDivider {
   border-top: 1px solid var(--gray-light);
-  padding-top: 16px;
+  padding-top: 24px;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
+  column-gap: 12px;
+  row-gap: 8px;
+  margin-bottom: 32px;
 }
 
 .filterButton {
@@ -80,7 +91,6 @@
   justify-content: center;
   gap: 12px;
   border: 1px solid var(--gray-light);
-
   border-radius: 12px;
   padding: 16px 18px;
   width: 112px;
@@ -105,7 +115,7 @@
 }
 
 .filterLabel {
-  font-size: 14px;
+  font-size: 16px;
   color: var(--main);
   font-weight: 500;
   text-align: center;
@@ -114,6 +124,6 @@
 .searchButton {
   border-radius: 200px;
     padding: 16px 60px;
-    width: 166px;
-    height: 56px;
+    margin-top: 8px;
+   
 }

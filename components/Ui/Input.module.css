@@ -13,8 +13,7 @@
 .input {
 border-radius: 12px;
     padding: 18px 218px 18px 20px;
-    width: 360px;
-    height: 56px;
+    border: none;
     background: var(--inputs);
    
 }
