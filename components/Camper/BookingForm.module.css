@@ -98,15 +98,39 @@
   overflow: hidden;
 }
 
+:global(.react-datepicker::before) {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 8px solid var(--text);
+}
 
+:global(.react-datepicker::after) {
+  content: "";
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid var(--white);
+}
 
 :global(.react-datepicker__header) {
   background-color: var(--white);
-  border-bottom: none;
+  border-bottom: 1px solid var(--text);
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
   padding-top: 14px;
-  padding-bottom: 0;
+  padding-bottom: 14px;
   position: relative;
 }
 
